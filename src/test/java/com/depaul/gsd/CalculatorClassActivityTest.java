@@ -18,4 +18,18 @@ public class CalculatorClassActivityTest {
         assertEquals(0, calculator.getValue(), "Initial value will be 0");
     }
 
+    @Test
+    @DisplayName("Adding should result in 5")
+    void addCalculatorTest() {
+        calculator.add(5);
+        assertEquals(5, calculator.getValue(), "value will now be 5");
+    }
+
+    @Test
+    @DisplayName("Subtract should result in -10")
+    void subtractCalculatorTest() {
+        calculator.subtract(10);
+        assertEquals(-10, calculator.getValue(), "value will now be -10");
+    }
+
 }
