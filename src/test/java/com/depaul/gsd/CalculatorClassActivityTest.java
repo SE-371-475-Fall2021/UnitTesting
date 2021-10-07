@@ -21,16 +21,17 @@ public class CalculatorClassActivityTest {
     }
 
     @Test
-    @DisplayName("First one is 0")
-
+    @DisplayName("Result is 7")
     void addSevenToInitial(){
-        assertEquals(7, calculator.add(calculator.getValue(), 7));
+        calculator.add(7);
+        assertEquals(7, calculator.getValue());
     }
 
     @Test
-    @DisplayName("First one is 0")
+    @DisplayName("Result is -10")
         void substractFromInitial(){
-        assertEquals(-10, calculator.subtract(calculator.getValue(), 10));
+        calculator.subtract(10);
+        assertEquals(-10, calculator.getValue());
     }
 
 

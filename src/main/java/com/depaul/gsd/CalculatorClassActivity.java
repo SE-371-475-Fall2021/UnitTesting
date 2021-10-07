@@ -9,7 +9,7 @@ public class CalculatorClassActivity {
         this.value = 0;
     }
 
-    public void add(int value, int number) {
+    public void add(int number) {
         this.value = this.value + number;
     }
 
