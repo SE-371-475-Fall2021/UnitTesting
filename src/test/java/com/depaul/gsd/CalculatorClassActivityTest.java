@@ -20,4 +20,18 @@ class CalculatorClassActivityTest {
     void calculatorInitialValueZero() {
         assertEquals(0,calculator.getValue());
     }
+
+    @Test
+    @DisplayName("Confirm Adding 7 to initial value")
+    public void valueFiveWhenFiveAdded() {
+        calculator.add(7);
+        assertEquals(7, calculator.getValue());
+    }
+
+    @Test
+    @DisplayName("Confirm Subtracting 10 from initial value")
+    public void valueMinusTwoWhenTwoSubstracted() {
+        calculator.subtract(10);
+        assertEquals(-10, calculator.getValue());
+    }
 }
