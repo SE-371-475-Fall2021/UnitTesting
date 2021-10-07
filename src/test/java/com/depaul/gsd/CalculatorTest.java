@@ -21,7 +21,7 @@ class CalculatorTest {
 //  @DisplayName can be used to define the name of the test which is displayed to the user
     @Test
     @DisplayName("Simple multiplication should work")
-//    @Disabled("The method changed - Fix later")  //marks a test to be disabled.
+    @Disabled("The method changed - Fix later")  //marks a test to be disabled.
     void multiply() {
 
 //      This is an assert statement which validates that expected and actual value is the same, if not the message at the end of the method is shown
@@ -35,7 +35,7 @@ class CalculatorTest {
     void testMultiplyWithZero() {
 
 //        Skip the test if executed on Windows.
-//        Assumptions.assumeFalse(System.getProperty("os.name").contains("Linux"));
+        Assumptions.assumeFalse(System.getProperty("os.name").contains("Windows"));
 
         assertEquals(0, calculator.multiply(0, 5), "Multiple with zero should be zero");
         assertEquals(0, calculator.multiply(5, 0), "Multiple with zero should be zero");
