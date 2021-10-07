@@ -12,6 +12,7 @@ class CalculatorClassActivityTest {
     void setUp() {
          calculatorClassActivity = new CalculatorClassActivity();
     }
+    
     @Test
     void getValue() {
         assertEquals(0,calculatorClassActivity.getValue());
