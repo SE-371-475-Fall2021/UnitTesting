@@ -11,6 +11,7 @@ class CalculatorTest {
 
     Calculator calculator;
 
+
 //  The method annotated with @BeforeEach runs before each test
     @BeforeEach
     void setUp() {
@@ -39,6 +40,32 @@ class CalculatorTest {
 
         assertEquals(0, calculator.multiply(0, 5), "Multiple with zero should be zero");
         assertEquals(0, calculator.multiply(5, 0), "Multiple with zero should be zero");
+    }
+
+    @Test
+    @DisplayName("initial value should be 0")
+    void initialZero() {
+        CalculatorClassActivity clas = new CalculatorClassActivity();
+        assertEquals(0, clas.getValue());
+
+    }
+
+    @Test
+    @DisplayName("Addition in class should be functioning")
+    void additionTest(){
+        int expected = 7;
+        CalculatorClassActivity clas = new CalculatorClassActivity();
+        clas.add(7);
+        assertEquals(expected, clas.getValue());
+    }
+
+    @Test
+    @DisplayName("Subtraction in class should be functioning")
+    void subtractionTest(){
+        int expected = -10;
+        CalculatorClassActivity clas = new CalculatorClassActivity();
+        clas.subtract(10);
+        assertEquals(expected, clas.getValue());
     }
 
 }
