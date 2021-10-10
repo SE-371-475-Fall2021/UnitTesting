@@ -9,12 +9,13 @@ import static org.junit.jupiter.api.Assertions.*;
 
 class CalculatorTest {
 
+
     Calculator calculator;
 
 //  The method annotated with @BeforeEach runs before each test
     @BeforeEach
     void setUp() {
-        calculator = new Calculator();
+        calculator = new Calculator(); //insisting calculator
     }
 
 //  A method annotated with @Test defines a test method

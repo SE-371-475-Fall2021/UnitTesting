@@ -21,7 +21,7 @@ class CalculatorTestParam {
     public static int[][] data() {
         return new int[][] { { 2 , 3, 6 }, { 7, 8, 56 }, { 110, 7, 770 } };
     }
-
+    //                                                  {m1,  m2, expected}
     @ParameterizedTest
     @MethodSource(value =  "data")
     void testWithStringParameter(int[] data) {
